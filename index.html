@@ -3,21 +3,90 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Landing Page - Bootstrap</title>
+  <title>Landing Page - Roxo</title>
   <!-- Link para o CSS do Bootstrap -->
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <style>
+    /* Cores principais */
+    :root {
+      --roxo-escuro: #5e2a84;
+      --roxo-claro: #a64ca6;
+      --roxo-media: #9b59b6;
+    }
+
+    /* Estilo geral do corpo */
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+
+    /* Cabeçalho */
+    nav.navbar {
+      background-color: var(--roxo-escuro);
+    }
+    nav.navbar a {
+      color: white;
+    }
+    nav.navbar a:hover {
+      color: var(--roxo-claro);
+    }
+
+    /* Seção Hero */
     .hero-section {
-      background: #f8f9fa;
+      background: linear-gradient(135deg, var(--roxo-escuro), var(--roxo-claro));
+      color: white;
       padding: 100px 0;
     }
+    .hero-section h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+    .hero-section p {
+      font-size: 1.2rem;
+    }
+    .hero-section .btn {
+      background-color: var(--roxo-claro);
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      border-radius: 30px;
+      transition: background-color 0.3s ease;
+    }
+    .hero-section .btn:hover {
+      background-color: var(--roxo-escuro);
+    }
+
+    /* Seção de Recursos */
     .feature {
+      background-color: #f0f0f0;
       padding: 60px 0;
     }
+    .feature h2 {
+      color: var(--roxo-escuro);
+      margin-bottom: 40px;
+    }
+    .card {
+      border: none;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+    }
+    .card img {
+      border-radius: 5px;
+    }
+
+    /* Rodapé */
     footer {
-      background-color: #343a40;
+      background-color: var(--roxo-escuro);
       color: white;
       padding: 20px 0;
+    }
+    footer p {
+      font-size: 1rem;
     }
   </style>
 </head>
@@ -54,7 +123,7 @@
     <div class="container">
       <h1 class="display-4">Bem-vindo à nossa página!</h1>
       <p class="lead">Nós oferecemos as melhores soluções para o seu negócio.</p>
-      <a href="#" class="btn btn-primary btn-lg">Saiba Mais</a>
+      <a href="#" class="btn btn-lg">Saiba Mais</a>
     </div>
   </div>
 
@@ -98,7 +167,6 @@
   <footer>
     <div class="container text-center">
       <p>&copy; 2025 Minha Landing Page - Todos os direitos reservados.</p>
-      <p>Redirecionando para o Discord... <a href="https://discord.com/invite/drvHQrneNt">Clique aqui se não for redirecionado</a>.</p>
     </div>
   </footer>
 
